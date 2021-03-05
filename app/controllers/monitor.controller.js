@@ -8,7 +8,7 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Monitor
 exports.create = (req, res) => {
     // Validate a request
-    if(!req.body.pid) {
+    if(!req.body.pid && !req.body.name) {
         res.status(400).send({
             message: "Content can not be empty!"
         });
@@ -57,7 +57,7 @@ exports.findAll = (req, res) => {
         });
 };
 
-// Find a single Monitor with an id or pid
+// Find a single Monitor with an id
 exports.findOne = (req, res) => {
     const id = req.params.id;
 
