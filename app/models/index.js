@@ -23,6 +23,6 @@ db.sequelize = sequelize;
 
 // Invoke the models for the database
 db.monitor = require("./monitor.model.js")(sequelize, Sequelize);
-// db.monitoring = require("./monitoring.model.js")(sequelize, Sequelize);
+db.monitoring = require("./monitoring.model.js")(sequelize, Sequelize);
 
 module.exports = db;
