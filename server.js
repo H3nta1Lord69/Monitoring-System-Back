@@ -33,6 +33,9 @@ app.get("/", (req, res) => {
     res.json({ message: "Welcome to monitoring application" });
 });
 
+require("./app/routes/monitors.routes")(app);
+require("./app/routes/monitorings.routes")(app);
+
 // Set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
