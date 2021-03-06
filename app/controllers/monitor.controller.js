@@ -52,7 +52,7 @@ exports.findAll = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error ocurred while retrieving tutorials."
+                    err.message || "Some error ocurred while retrieving monitors."
             });
         });
 };
